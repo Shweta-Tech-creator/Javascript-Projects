@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 2 - Counter App</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f2f2f2;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .count {
+      font-size: 5rem;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .btn {
+      font-size: 1.2rem;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    .green {
+      background-color: #4caf50;
+    }
+
+    .red {
+      background-color: #f44336;
+    }
+
+    .blue {
+      background-color: #2196f3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="count" id="counter">0</div>
+    <div class="buttons">
+      <button id="increment" class="btn green">➕ Increment</button>
+      <button id="decrement" class="btn red">➖ Decrement</button>
+      <button id="reset" class="btn blue">🔁 Reset</button>
+    </div>
+  </div>
+
+  <script>
+    let count = 0;
+    const counter = document.getElementById("counter");
+
+    const update = () => {
+      counter.textContent = count;
+      counter.style.color =
+        count > 0 ? "#4caf50" : count < 0 ? "#f44336" : "#333";
+    };
+
+    document.getElementById("increment").onclick = () => {
+      count++;
+      update();
+    };
+
+    document.getElementById("decrement").onclick = () => {
+      if (count > 0) count--;
+      update();
+    };
+
+    document.getElementById("reset").onclick = () => {
+      count = 0;
+      update();
+    };
+
+    update();
+  </script>
+</body>
+</html>

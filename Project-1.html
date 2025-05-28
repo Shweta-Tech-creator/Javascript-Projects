@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Color Toggle</title>
+</head>
+<body>
+
+  <button onclick="changeColor()">Change Color</button>
+  <p id="color">Current Color: #ff9999</p>
+
+  <script>
+    function changeColor() {
+    var color = "#" + Math.floor(Math.random() * 16777215).toString(16);
+    document.body.style.backgroundColor = color;
+    document.getElementById("colorCode").innerText = color;
+    }
+    </script>
+
+</body>
+</html>
