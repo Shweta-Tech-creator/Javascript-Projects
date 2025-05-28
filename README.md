@@ -13,4 +13,4 @@ Project-2(output):
 https://github.com/user-attachments/assets/87872c1f-96d3-4553-b1fa-715e04651a88
 
 📂 How to Use:
-Clone the repo:https://github.com/Shweta-Tech-creator/Javascript-Projects.git
+- Clone the repo:https://github.com/Shweta-Tech-creator/Javascript-Projects.git
